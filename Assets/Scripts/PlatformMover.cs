@@ -36,7 +36,7 @@ public class PlatformMover : MonoBehaviour
         float step = moveSpeed * Time.deltaTime;
         if (transform.position.x >= target.position.x)
         {
-            print("Move Left");
+            // print("Move Left");
             moveRight = false;
         }
         else if (transform.position == startPos)
@@ -58,7 +58,7 @@ public class PlatformMover : MonoBehaviour
         float step = moveSpeed * Time.deltaTime;
         if (transform.position.y >= target.position.y)
         {
-            print("Move Down");
+            // print("Move Down");
             moveUpwards = false;
         }
         else if (transform.position == startPos)

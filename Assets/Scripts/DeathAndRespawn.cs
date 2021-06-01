@@ -18,5 +18,6 @@ public class DeathAndRespawn : MonoBehaviour
         {
             SceneManager.LoadScene(currentScene);
         }
+
     }
 }
