@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3670127537765959209}
   - component: {fileID: 7127543889805713305}
   - component: {fileID: 5550446299581507591}
-  - component: {fileID: -2508917153197124978}
+  - component: {fileID: -9157206962176417984}
   m_Layer: 0
   m_Name: FloorSpike
   m_TagString: Death
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.52}
   m_EdgeRadius: 0
---- !u!114 &-2508917153197124978
+--- !u!114 &-9157206962176417984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

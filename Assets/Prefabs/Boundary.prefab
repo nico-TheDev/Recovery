@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5675480165518065197}
   - component: {fileID: 5675480165518065198}
-  - component: {fileID: 5675480165518065196}
+  - component: {fileID: 2665449283660468024}
   m_Layer: 0
   m_Name: Boundary
   m_TagString: Death
@@ -58,7 +58,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 300.95428, y: 3.5313034}
   m_EdgeRadius: 0
---- !u!114 &5675480165518065196
+--- !u!114 &2665449283660468024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
