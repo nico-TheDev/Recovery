@@ -3,12 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class DeathAndRespawn : MonoBehaviour
 {
+    Scene scene;
     // Start is called before the first frame update
-    string currentScene;
     void Start()
     {
-        Scene scene = SceneManager.GetActiveScene();
-        currentScene = scene.name;
+        scene = SceneManager.GetActiveScene();
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,7 +15,7 @@ public class DeathAndRespawn : MonoBehaviour
         print(other.gameObject.tag);
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(currentScene);
+            SceneManager.LoadScene(scene.buildIndex);
         }
 
     }

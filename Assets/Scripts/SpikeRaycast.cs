@@ -6,6 +6,7 @@ public class SpikeRaycast : MonoBehaviour
 {
 
     public float rayLength = 10f;
+    public float gravityPull = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class SpikeRaycast : MonoBehaviour
             Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
             BoxCollider2D col = gameObject.AddComponent<BoxCollider2D>();
             col.isTrigger = true;
-            rb.gravityScale = 4f;
+            rb.gravityScale = gravityPull;
 
             StartCoroutine(DestroySelf());
             // Debug.Log(hit.collider.name);
