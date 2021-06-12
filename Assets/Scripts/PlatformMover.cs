@@ -6,7 +6,6 @@ public class PlatformMover : MonoBehaviour
 {
     public float moveSpeed = 4f;
     [Range(2, 20)]
-    public float moveRange = 4f;
     bool moveRight = false;
     bool moveUpwards = true;
     public bool isSideways = true;
