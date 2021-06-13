@@ -36,4 +36,17 @@ public class SceneLoader : MonoBehaviour
         Time.timeScale = 1;
     }
 
+
+    // LEVELS
+
+    public void LoadLevel(string target)
+    {
+        SceneManager.LoadScene("Level" + target);
+    }
+
+    public void LoadNextLevel()
+    {
+        int nextLevel = PlayerPrefs.GetInt("CurrentPlayerLevel") + 1;
+        SceneManager.LoadScene("Level" + nextLevel.ToString());
+    }
 }
