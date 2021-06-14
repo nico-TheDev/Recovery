@@ -9,16 +9,26 @@ public class PlatformMover : MonoBehaviour
     bool moveRight = false;
     bool moveUpwards = true;
     public bool isSideways = true;
-
+    public bool isPlayerOnPlatform = false;
+    public GameObject player;
     private Vector3 startPos;
     public Transform target;
-    void Awake()
+    void Start()
     {
         startPos = transform.position;
+
     }
 
     void FixedUpdate()
     {
+        if (isPlayerOnPlatform)
+        {
+            player.transform.SetParent(gameObject.transform);
+        }
+        if (!isPlayerOnPlatform)
+        {
+            player.transform.SetParent(null);
+        }
 
         if (isSideways)
         {
@@ -74,4 +84,22 @@ public class PlatformMover : MonoBehaviour
         }
     }
 
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            print("Player is on a platform");
+            isPlayerOnPlatform = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            print("Player left a platform");
+            isPlayerOnPlatform = false;
+        }
+    }
 }
