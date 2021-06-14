@@ -156,6 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   isSideways: 1
+  isPlayerOnPlatform: 0
+  player: {fileID: 3488946350535312708, guid: 884329478e3d2784fa898ce798151a7c, type: 3}
   target: {fileID: 781161299847117350}
 --- !u!1 &781161299847117349
 GameObject:
