@@ -846,9 +846,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Continue
-
-'
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d5101daab036f6d4092c4de0d6959b16, type: 2}
   m_sharedMaterial: {fileID: -3991301213162640404, guid: d5101daab036f6d4092c4de0d6959b16,
