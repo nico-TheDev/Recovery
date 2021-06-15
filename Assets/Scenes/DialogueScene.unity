@@ -151,7 +151,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 375194141}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -205,8 +205,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &52319776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -307,12 +307,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b18c8543640c3341b5ef154ebfa594f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    chapter: Chapter 2
-    sentences:
-    - "\u201CI saw some trash lying around. Actually, not some. A lot.\u201D"
-    - "\u201CThe air was pretty stuffy. It was really hard to breathe.\u201D"
-    - "\u201CI had to go search for supplies before I starved to death.\u201D"
+  chapterZero:
+    chapter: 
+    sentences: []
+  chapterOne:
+    chapter: 
+    sentences: []
+  chapterTwo:
+    chapter: 
+    sentences: []
+  chapterThree:
+    chapter: 
+    sentences: []
+  chapterFour:
+    chapter: 
+    sentences: []
+  chapterFive:
+    chapter: 
+    sentences: []
+  chapterSix:
+    chapter: 
+    sentences: []
+  chapterSeven:
+    chapter: 
+    sentences: []
+  chapterEight:
+    chapter: 
+    sentences: []
+  chapterNine:
+    chapter: 
+    sentences: []
+  chapterTen:
+    chapter: 
+    sentences: []
 --- !u!114 &52319778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,8 +383,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 52319777}
-        m_MethodName: TriggerDialogue
+      - m_Target: {fileID: 517883429}
+        m_MethodName: LoadNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -416,7 +443,6 @@ GameObject:
   - component: {fileID: 239740274}
   - component: {fileID: 239740273}
   - component: {fileID: 239740272}
-  - component: {fileID: 239740271}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -437,31 +463,13 @@ RectTransform:
   m_Children:
   - {fileID: 787407978}
   m_Father: {fileID: 375194141}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -109, y: 54}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &239740271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 239740269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b18c8543640c3341b5ef154ebfa594f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    chapter: 
-    sentences:
-    - "Sample 1\t"
-    - "Yello\t"
-    - dsadasddasas
 --- !u!114 &239740272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,17 +653,152 @@ RectTransform:
   m_Children:
   - {fileID: 1642231275}
   - {fileID: 52319776}
+  - {fileID: 1053349257}
   - {fileID: 239740270}
   - {fileID: 2631704}
   - {fileID: 477346818}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &386685530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 386685531}
+  - component: {fileID: 386685533}
+  - component: {fileID: 386685532}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &386685531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386685530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1053349257}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &386685532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386685530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: End Game
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: d5101daab036f6d4092c4de0d6959b16, type: 2}
+  m_sharedMaterial: {fileID: -3991301213162640404, guid: d5101daab036f6d4092c4de0d6959b16,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &386685533
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386685530}
+  m_CullTransparentMesh: 0
 --- !u!1 &477346817
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +829,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 375194141}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -790,6 +933,49 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &517883428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517883430}
+  - component: {fileID: 517883429}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &517883429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517883428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392591832d15e6241915654780421c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &517883430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517883428}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 382.64093, y: 156.83743, z: -39.887566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &787407977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,8 +1191,195 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1053349252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1053349257}
+  - component: {fileID: 1053349256}
+  - component: {fileID: 1053349255}
+  - component: {fileID: 1053349254}
+  - component: {fileID: 1053349253}
+  m_Layer: 5
+  m_Name: EndButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1053349253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053349252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b18c8543640c3341b5ef154ebfa594f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chapterZero:
+    chapter: 
+    sentences: []
+  chapterOne:
+    chapter: 
+    sentences: []
+  chapterTwo:
+    chapter: 
+    sentences: []
+  chapterThree:
+    chapter: 
+    sentences: []
+  chapterFour:
+    chapter: 
+    sentences: []
+  chapterFive:
+    chapter: 
+    sentences: []
+  chapterSix:
+    chapter: 
+    sentences: []
+  chapterSeven:
+    chapter: 
+    sentences: []
+  chapterEight:
+    chapter: 
+    sentences: []
+  chapterNine:
+    chapter: 
+    sentences: []
+  chapterTen:
+    chapter: 
+    sentences: []
+--- !u!114 &1053349254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053349252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1053349255}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 517883429}
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 517883429}
+        m_MethodName: ClearSave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1053349255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053349252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1053349256
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053349252}
+  m_CullTransparentMesh: 0
+--- !u!224 &1053349257
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053349252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 386685531}
+  m_Father: {fileID: 375194141}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -302, y: 54}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1634598894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642231274
 GameObject:
@@ -1106,9 +1479,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642231276
 MonoBehaviour:
@@ -1130,7 +1503,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1159,7 +1532,7 @@ GameObject:
   - component: {fileID: 1829314158}
   - component: {fileID: 1829314157}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1293,6 +1666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2134442158}
   - component: {fileID: 2134442157}
+  - component: {fileID: 2134442159}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -1314,6 +1688,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chapterText: {fileID: 477346820}
   dialogueText: {fileID: 2631705}
+  endBtn: {fileID: 1053349252}
+  startBtn: {fileID: 52319775}
+  nextBtn: {fileID: 239740269}
 --- !u!4 &2134442158
 Transform:
   m_ObjectHideFlags: 0
@@ -1326,5 +1703,139 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134442159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134442156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b18c8543640c3341b5ef154ebfa594f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chapterZero:
+    chapter: 0
+    sentences:
+    - "\u201C\u2026\u201D"
+    - "\u201C\u2026\u201D"
+    - "\u201CUgh\u2026 what happened? Where is everyone?\u201D"
+  chapterOne:
+    chapter: 1
+    sentences:
+    - "\u201CI saw some trash lying around. Actually, not some. A lot.\u201D"
+    - "\u201CThe air was pretty stuffy. It was really hard to breathe.\u201D"
+    - "\u201CI had to go search for supplies before I starved to death.\u201D"
+  chapterTwo:
+    chapter: 2
+    sentences:
+    - "\u201CI went to the city and found a lot of the stores looted. Most of them
+      ransacked or burned down.\u201D"
+    - "\u201CIt was tough finding small shops that had goods enough to last both
+      the time and my hunger.\u201D"
+    - "\u201CA lot of the vandalism on the walls of building had some creepy messages\u2026\u201D"
+    - "\u201CO U R  F A U L T\u201D"
+    - "\u201CM A T R I C I D E\u201D"
+    - "\u201CN O  H O M E\u201D"
+  chapterThree:
+    chapter: 3
+    sentences:
+    - "\u201CI grabbed some supplies after searching for hours and left the urban
+      jungle.\u201D"
+    - "\u201DJust being there alone gave me the creeps.\u201D"
+    - "\u201CThe night falls and I could see abandoned buildings but it\u2019s far
+      enough for me to be comfortable.\u201D"
+    - "\u201CThe river was brown and stank but at least it was some nature.\u201D"
+    - "\u201CThough I couldn\u2019t say that for everything else in the area.\u201D"
+  chapterFour:
+    chapter: 4
+    sentences:
+    - "\u201CI saw a small plant. It had nice red petals. I hoped someone would show
+      up to see it too.\u201D"
+    - "\u201CI loosely remembered that plants like these sold for a high price. I
+      didn\u2019t remember why.\u201D"
+    - "\u201CI shivered night after night just wondering where everyone was. I was
+      scared. I was alone.\u201D"
+    - "\u201CSlowly, I remembered.\u201D"
+    - "\u201CSlowly, I recovered.\u201D"
+  chapterFive:
+    chapter: 5
+    sentences:
+    - "\u201CI looked for the plant I found from a few weeks prior and stared at
+      it with intensity.\u201D"
+    - "\u201CNormally I used it as a landmark of sorts when scouring the city for
+      food but I felt something different.\u201D"
+    - "\u201CI was vaguely reminded of something. Something important. Something
+      I had to do.\u201D"
+    - "\u201CThat plant\u2026 that inanimate, sedentary plant. It wanted to tell
+      me something.\u201D"
+    - "\u201CI couldn\u2019t just sit around there any longer. I had to go somewhere.\u201D"
+    - "\u201CSomehow.\u201D"
+  chapterSix:
+    chapter: 6
+    sentences:
+    - "\u201CI picked up a pen and some disgusting paper from a few trash heaps.
+      Tried to write a journal.\u201D"
+    - "\u201CDay 21. I remembered this planet was dying. There was something I was
+      doing to stop it.\u201D"
+    - "\u201CDay 23. I was\u2026 no, am a bioengineer. I specialized in mutating
+      plant genes.\u201D"
+    - "\u201CDay 24. I did research. A plant I was mutating was supposed to re-green
+      the Earth.\u201D"
+    - "\u201CDay 25. I remembered the location of my laboratory. I hoped it\u2019s
+      still there. I\u2019ll go now.\u201D"
+    - "\u201CI got tired of writing the journal, it really wasn\u2019t my style.
+      Besides, no one\u2019s going to read it.\u201D"
+  chapterSeven:
+    chapter: 7
+    sentences:
+    - "\u201CI found the lab. It was destroyed. Though it looks like it wasn\u2019t
+      from neglect, the damage here...\u201D"
+    - "\u201C\u2026it was intentional.\u201D"
+    - "\u201CYes, normally my lab doesn\u2019t have enough flammables to burn the
+      place down like this."
+    - "\u201CThere\u2019s dried blood on the wall. Blood and rotting brain matter
+      spread around.\u201D"
+    - "\u201CI went around to find that mutated plant. The building was going to
+      collapse anytime soon.\u201D"
+  chapterEight:
+    chapter: 8
+    sentences:
+    - "\u201CThat\u2019s right, I hid it somewhere. I knew trouble was happening
+      so I hid it and ran.\u201D"
+    - "\u201CMy entire crew killed. Bodies are missing but they left the stains as
+      a message.\u201D"
+    - "\u201CI didn\u2019t need to remember anything. There is only one reason why
+      they didn\u2019t want this to continue.\u201D"
+    - "\u201CWhoever had left me stranded here wasn\u2019t intentional. It would\u2019ve
+      been wiser to kill me.\u201D"
+  chapterNine:
+    chapter: 9
+    sentences:
+    - "\u201CI remember now. I hid it as they were being killed. A stupid decision
+      on my part. I ran instead.\u201D"
+    - "\u201CBut they knew I was missing.  I went in hiding for days, until it was
+      time to leave the planet.\u201D"
+    - "\u201CI could not have gone back to the lab, I would have been captured and
+      tortured for information.\u201D"
+    - "\u201CI wasn\u2019t going to deal with that, so I said goodbye to Earth. I
+      was such a coward.\u201D"
+    - "\u201CAlas, they found me. It wasn\u2019t that hard, after all, they\u2019re
+      the ones who made the ships.\u201D"
+    - "\u201CI tried to jump out, and then, nothing.\u201D"
+  chapterTen:
+    chapter: 10
+    sentences:
+    - "\u201CI found where it was hidden. Under some tiles that I hid under a locker.\u201D"
+    - "\u201CThe plant was there thankfully. I kept it in its own bottle garden so
+      it wouldn\u2019t die.\u201D"
+    - "\u201CI mutated this plant so it could grow from plastics and waste and reproduce
+      by itself.\u201D"
+    - "\u201CWith that I could spark a few generations\u2019 worth of cleaning up
+      plastics in a decade.\u201D"
+    - "\u201CWith one last look at the hope of Earth I planted it next to the red
+      flower.\u201D"
+    - "\u201CNow what? I observe. I wait. I will return to you soon, Mother Earth.\u201D"
