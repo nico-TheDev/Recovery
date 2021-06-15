@@ -13,12 +13,20 @@ public class UIManager : MonoBehaviour
     public GameObject pauseBtn;
 
     public GameObject nextLevelBtn;
+    public GameObject endBtn;
+
 
     public TextMeshProUGUI deathCounter;
 
     public void HideNextLevelBtn()
     {
         nextLevelBtn.SetActive(false);
+    }
+
+    public void ShowEndBtn()
+    {
+        endBtn.SetActive(true);
+
     }
 
     public void HidePauseBtn()

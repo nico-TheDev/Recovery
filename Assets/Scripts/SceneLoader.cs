@@ -12,7 +12,14 @@ public class SceneLoader : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level10")
         {
             uiManager.HideNextLevelBtn();
+            uiManager.ShowEndBtn();
         }
+    }
+
+    public void ClearSave()
+    {
+        PlayerPrefs.SetInt("deathCount", 0);
+        PlayerPrefs.SetInt("CurrentPlayerLevel", 0);
     }
 
     public void ContinueGame()
@@ -46,6 +53,19 @@ public class SceneLoader : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void LoadNewGame()
+    {
+        ClearSave();
+
+        LoadDialogue();
+    }
+
+    public void LoadDialogue()
+    {
+        SceneManager.LoadScene("DialogueScene");
+
+    }
+
 
     // LEVELS
 
@@ -60,8 +80,18 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Level" + nextLevel.ToString());
     }
 
-    public void ClearDeathCount()
+    public void LoadFinal()
     {
-        PlayerPrefs.SetInt("deathCount", 0);
+        int nextLevel = PlayerPrefs.GetInt("CurrentPlayerLevel") + 1;
+        if (nextLevel == 11)
+        {
+            LoadDialogue();
+        }
     }
+    public void LoadCurrentLevel()
+    {
+        int currentLevel = PlayerPrefs.GetInt("CurrentPlayerLevel");
+        SceneManager.LoadScene("Level" + currentLevel.ToString());
+    }
+
 }
