@@ -7,7 +7,12 @@ public class DialogueManager : MonoBehaviour
 
     public TextMeshProUGUI chapterText;
     public TextMeshProUGUI dialogueText;
+    public GameObject endBtn;
     private Queue<string> sentences;
+
+    public GameObject startBtn;
+    public GameObject nextBtn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +60,15 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        print("Chapter End");
+
+        startBtn.SetActive(true);
+        nextBtn.SetActive(false);
+
+        if (PlayerPrefs.GetInt("CurrentPlayerLevel") == 10)
+        {
+            endBtn.SetActive(true);
+            startBtn.SetActive(false);
+
+        }
     }
 }
