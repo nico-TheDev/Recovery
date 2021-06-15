@@ -4,6 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
+    UIManager uiManager;
+    void Start()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+
+        if (SceneManager.GetActiveScene().name == "Level10")
+        {
+            uiManager.HideNextLevelBtn();
+        }
+    }
 
     public void ContinueGame()
     {
@@ -48,5 +58,10 @@ public class SceneLoader : MonoBehaviour
     {
         int nextLevel = PlayerPrefs.GetInt("CurrentPlayerLevel") + 1;
         SceneManager.LoadScene("Level" + nextLevel.ToString());
+    }
+
+    public void ClearDeathCount()
+    {
+        PlayerPrefs.SetInt("deathCount", 0);
     }
 }

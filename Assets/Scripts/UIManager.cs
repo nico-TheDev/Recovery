@@ -2,11 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using TMPro;
+
 public class UIManager : MonoBehaviour
 {
 
     public GameObject deathPanel;
     public GameObject clearLevelPanel;
+
+    public GameObject pauseBtn;
+
+    public GameObject nextLevelBtn;
+
+    public TextMeshProUGUI deathCounter;
+
+    public void HideNextLevelBtn()
+    {
+        nextLevelBtn.SetActive(false);
+    }
+
+    public void HidePauseBtn()
+    {
+        pauseBtn.SetActive(false);
+    }
 
     public void ShowDeathPanel()
     {
@@ -24,5 +42,10 @@ public class UIManager : MonoBehaviour
     public void HideClearLevelPanel()
     {
         clearLevelPanel.SetActive(false);
+    }
+
+    public void SetDeathCount(int count)
+    {
+        deathCounter.SetText("Death Count:" + count.ToString());
     }
 }
