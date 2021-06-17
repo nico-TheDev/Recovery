@@ -25,6 +25,8 @@ public class DialogueTrigger : MonoBehaviour
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
         currentChapter = PlayerPrefs.GetInt("CurrentPlayerLevel");
+        FindObjectOfType<AudioManager>().Play("dialogue");
+
     }
     void Start()
     {

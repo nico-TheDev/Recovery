@@ -72,6 +72,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadLevel(string target)
     {
         SceneManager.LoadScene("Level" + target);
+        FindObjectOfType<AudioManager>().StopAll();
     }
 
     public void LoadNextLevel()
