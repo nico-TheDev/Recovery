@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SoundPlayer : MonoBehaviour
 {
-
+    AudioManager audioManager;
 
 
 
@@ -31,7 +31,7 @@ public class SoundPlayer : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        AudioManager audioManager = FindObjectOfType<AudioManager>();
+        audioManager = FindObjectOfType<AudioManager>();
 
         string sceneName = currentScene.name;
         audioManager.StopAll();
@@ -60,9 +60,8 @@ public class SoundPlayer : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayClick()
     {
-
+        audioManager.Play("Click");
     }
 }

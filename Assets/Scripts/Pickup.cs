@@ -14,16 +14,13 @@ public class Pickup : MonoBehaviour
         nextLevel = PlayerPrefs.GetInt("PlayerCurrentLevel") + 1;
     }
 
-    void Update()
-    {
-        // transform.position = new Vector3(transform.position.x, myCurve.Evaluate((Time.time % myCurve.length)), transform.position.z);
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             loader.ShowClearLevelPanel();
+            loader.HidePauseBtn();
             other.gameObject.SetActive(false); // Deact Player
         }
     }
