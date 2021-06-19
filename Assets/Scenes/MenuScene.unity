@@ -517,7 +517,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 214103986}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1290494654}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &214103986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5847,19 +5858,19 @@ MonoBehaviour:
   - name: Walk
     clip: {fileID: 8300000, guid: 2fae025e645878148a94b982974266cc, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
     loop: 1
   - name: Jump
     clip: {fileID: 8300000, guid: 2fae025e645878148a94b982974266cc, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
     loop: 0
   - name: Death
     clip: {fileID: 8300000, guid: c8c2ae41bc518a34b93e9fb6a042256a, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
     loop: 0
   - name: Click
@@ -5871,27 +5882,27 @@ MonoBehaviour:
   - name: Menu
     clip: {fileID: 8300000, guid: 95cd2df213d605145a82023681cef3b7, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
   - name: firstStage
     clip: {fileID: 8300000, guid: 036526baf9938de4c87b1a9f8c009756, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
   - name: secondStage
     clip: {fileID: 8300000, guid: f97d36c4f4cdc7244b7e0738263b81ea, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
   - name: thirdStage
     clip: {fileID: 8300000, guid: c8e7d5a7648de544c9e617d660051c51, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
   - name: dialogue
     clip: {fileID: 8300000, guid: 829252e9430d1ce45b0d669d1b6b2864, type: 3}
     volume: 1

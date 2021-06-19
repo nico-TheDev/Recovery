@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
         currentScene = SceneManager.GetActiveScene();
         currentLevel = currentScene.name.Remove(0, 5);
         PlayerPrefs.SetInt("CurrentPlayerLevel", Int32.Parse(currentLevel));
+        PlayerPrefs.SetInt("SaveData", Int32.Parse(currentLevel) - 1);
+
     }
 
 

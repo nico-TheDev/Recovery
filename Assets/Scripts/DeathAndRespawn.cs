@@ -16,6 +16,8 @@ public class DeathAndRespawn : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Death");
+
             other.gameObject.SetActive(false);
 
             if (PlayerPrefs.GetInt(deathCount) == 0)

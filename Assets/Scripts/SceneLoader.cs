@@ -20,11 +20,21 @@ public class SceneLoader : MonoBehaviour
     {
         PlayerPrefs.SetInt("deathCount", 0);
         PlayerPrefs.SetInt("CurrentPlayerLevel", 0);
+        PlayerPrefs.SetInt("SaveData", 0);
     }
 
     public void ContinueGame()
     {
-        SceneManager.LoadScene("TestScene");
+        int saveLevel = PlayerPrefs.GetInt("SaveData");
+        print("current Save is " + saveLevel);
+        if (saveLevel == 0)
+        {
+            LoadNewGame();
+        }
+        else
+        {
+            LoadLevel(saveLevel.ToString());
+        }
     }
 
     public void MainMenu()
@@ -94,5 +104,6 @@ public class SceneLoader : MonoBehaviour
         int currentLevel = PlayerPrefs.GetInt("CurrentPlayerLevel");
         SceneManager.LoadScene("Level" + currentLevel.ToString());
     }
+
 
 }
