@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SoundPlayer : MonoBehaviour
 {
     AudioManager audioManager;
-
 
 
     void Awake()
@@ -36,6 +36,8 @@ public class SoundPlayer : MonoBehaviour
         string sceneName = currentScene.name;
         audioManager.StopAll();
 
+
+
         if (sceneName == "MenuScene")
         {
             audioManager.Play("Menu");
@@ -64,4 +66,6 @@ public class SoundPlayer : MonoBehaviour
     {
         audioManager.Play("Click");
     }
+
+
 }

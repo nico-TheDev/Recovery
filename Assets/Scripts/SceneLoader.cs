@@ -81,6 +81,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLevel(string target)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Level" + target);
         FindObjectOfType<AudioManager>().StopAll();
     }
