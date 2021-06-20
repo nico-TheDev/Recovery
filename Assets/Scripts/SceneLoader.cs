@@ -44,6 +44,7 @@ public class SceneLoader : MonoBehaviour
 
     public void RestartScene()
     {
+        Time.timeScale = 1;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex);
     }
@@ -55,11 +56,13 @@ public class SceneLoader : MonoBehaviour
 
     public void PauseGame()
     {
+        uiManager.HidePauseBtn();
         Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
+        uiManager.ShowPauseBtn();
         Time.timeScale = 1;
     }
 

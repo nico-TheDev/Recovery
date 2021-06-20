@@ -34,6 +34,11 @@ public class UIManager : MonoBehaviour
         pauseBtn.SetActive(false);
     }
 
+    public void ShowPauseBtn()
+    {
+        pauseBtn.SetActive(true);
+    }
+
     public void ShowDeathPanel()
     {
         deathPanel.SetActive(true);
