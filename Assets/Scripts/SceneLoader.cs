@@ -68,6 +68,8 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadNewGame()
     {
+        Time.timeScale = 1;
+
         ClearSave();
 
         LoadDialogue();
