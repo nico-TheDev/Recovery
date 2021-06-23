@@ -25,6 +25,7 @@ public class SceneLoader : MonoBehaviour
 
     public void ContinueGame()
     {
+        Time.timeScale = 1;
         int saveLevel = PlayerPrefs.GetInt("SaveData");
         print("current Save is " + saveLevel);
         if (saveLevel == 0)
